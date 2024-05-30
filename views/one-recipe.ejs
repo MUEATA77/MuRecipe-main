@@ -1,0 +1,163 @@
+<%- include('header'); -%>
+
+  <div class="search-bar col-lg-7 col-md-11 col-sm-11 col-11 || m-0 m-auto mb-5">
+    <form action="/search" method="post" class="search-form">
+      <div class="input-wrapper col-12">
+        <input class="" name="recipe" type="text" placeholder="Search for recipe">
+        <button class="btn" style="color: #F7F6F2;"><img src="/img/search.png" width="16px"
+            alt=""></button>
+      </div>
+    </form>
+  </div>
+
+
+  <div class="row col-11 col-lg-7 col-md-11 col-sm-11 col-11 m-auto">
+    <div class="col-12 mt-3">
+      <div class="one-recipe-image col-12 ">
+        <img src="/foo/<%= Data1.image %>" class="card-img-top" />
+        <div class="one-recipe-image-content">
+          <h3 class="mb-4">
+            <%= Data1.title%>
+          </h3>
+          <a href="#jump" class="button">
+            Jump to Ingerdients
+            <span class="material-symbols-outlined">
+              arrow_right_alt
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+ <div class="col-lg-7 col-11" style="margin: auto; margin-top: 2cm;">
+    <% for (let i = 0; i < Data1.des.length; i++) {%>
+      <div class=" col-7 m-auto mb-5">
+        <h2 class="mb-3"><%= Data1.des[i].head %></h2>
+     <% for (let g = 0; g < Data1.des[i].info.length; g++) {%>
+      <p style="font-family: 'Unna', serif; font-size: large;"><%= Data1.des[i].info[g] %></p>
+   <% } %>
+      </div>
+      <%  } %>
+    </div>
+
+
+  <div class="col-11 col-lg-6 col-md-7 col-sm-9" style="margin: auto; margin-top: 2cm;">
+    <hr>
+  </div>
+
+
+  <!-- Ingerdients and methods -->
+
+  <div id="jump" class="row col-11 col-lg-6 col-md-7 col-sm-9 || mt-5 m-auto">
+
+    <div class="col-lg-6 ps-0 pe-0 pe-lg-3">
+      <div class="card">
+        <div class="card-header" style="background-color: #0A1D37;">
+          <h4 class="font-type text-light">Ingredients</h4>
+        </div>
+        <div class="card-body">
+          <% var ingerdients=Data1.con %>
+            <% for (let i=0; i < ingerdients.length; i++) {%>
+              <p style="font-family: 'Unna', serif;">
+                <%= ingerdients[i] %>
+              </p>
+              <hr>
+              <% } %>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-lg-6 || mt-5 mt-lg-0 || pe-lg-0 ps-lg-3 ps-0 pe-0">
+      <div class="card">
+        <div class="card-header" style="background-color: #0A1D37;">
+          <h4 class="font-type text-light">Method</h4>
+        </div>
+        <div class="card-body">
+
+          <% var methods=Data1.red %>
+            <% for (let i=0; i < methods.length; i++) {%>
+              <p style="font-family: 'Unna', serif;">
+                <%= methods[i] %>
+              </p>
+              <hr>
+              <% } %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Ingerdients and methods -->
+
+
+  <div class="col-11 col-lg-6 col-md-7 col-sm-9" style="margin: auto; margin-top: 3cm;">
+    <hr>
+  </div>
+
+
+  <!-- related -->
+  <div class="col-11  || " style="margin: auto; margin-top: 2cm; ">
+    <h3 class="font-type" style="padding-left: 0.50cm;">Recipe you will love</h3>
+  </div>
+
+
+    <div class="row col-11 m-auto ">
+      <% const random_num = Math.floor(Math.random()*32)  %>
+      <% for(let i = random_num ; i < random_num + 4 ; i++ ){ %>
+        <div class="col-6 col-lg-3 col-md-6 col-sm-6 mt-3">
+          <div class="card1 col-12">
+            <img src="/foo/<%= more_recipe[i].image %>" class="card-img-top" />
+            <div class="card-content">
+              <h3 class="mb-4">
+                <%=  more_recipe[i].title%>
+              </h3>
+              <a href="/one-recipe/<%=  more_recipe[i].title%>" class="button">
+                Find out more
+                <span class="material-symbols-outlined">
+                  arrow_right_alt
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <% } %>
+    </div>
+
+  <!-- related -->
+
+
+  <div class="col-11 col-lg-6 col-md-7 col-sm-9" style="margin: auto; margin-top: 2cm;">
+    <hr>
+  </div>
+
+
+
+  <!-- comment section -->
+
+
+
+  <div class="col-11 col-lg-6 col-md-7 col-sm-9" style="margin: auto; margin-top: 5px;">
+    <h4 class="font-type">Comments & Reviews</h4>
+  </div>
+
+
+  <div class="col-11 col-lg-6 col-md-7 col-sm-9  m-auto">
+    <div class="col-12" style="margin-top: 0.55cm;">
+      <form >
+        <input class="comment col-lg-2 col-6 me-5" type="text" placeholder="First Name">
+        <input class="comment col-lg-4 col-6 mt-3" type="email" placeholder="food@gmail.com">
+        <textarea class="mt-3" name="message" id="" cols="50" rows="4"
+          style="background-color: #F7F6F2;">Leave Your comment</textarea>
+        <div class="mt-3">
+          <button class="btn btn-dark">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- comment section -->
+
+  <div class="col-11 col-lg-6 col-md-7 col-sm-9" style="margin: auto; margin-top: 2cm;">
+    <hr>
+  </div>
+  <%- include('footer'); -%>

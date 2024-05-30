@@ -1,0 +1,157 @@
+<%- include('header'); -%>
+  <div class="search-bar col-lg-7 col-md-11 col-sm-11 col-11 || m-0 m-auto mb-5">
+    <form action="/search" method="post" class="search-form">
+      <div class="input-wrapper col-12">
+        <input class="" name="recipe" type="text" placeholder="Search for recipe">
+        <button class="btn  " style="color: #F7F6F2;"><img src="/img/search.png" width="16px"
+            alt=""></button>
+      </div>
+    </form>
+
+  </div>
+
+
+
+  <!-- New////////////////////////////////////////////////////////////////////////////////////////// -->
+
+  <div class="col-11 col-lg-7 m-auto ">
+    <div class="article-card col-12 h-75 ">
+      <div class="content">
+        <p class="date">Jan 1, 2022</p>
+        <p class="title">Article Title Goes Here</p>
+      </div>
+      <img src="/foo/Keto Salmon Cakes.png" class="" alt="article-cover" />
+    </div>
+  </div>
+
+  <!-- New////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <hr class="col-6" style="margin: auto; margin-top: 2cm; margin-bottom: 2cm;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Card////////////////////////////////////////////////////////////////////////////////////////// -->
+  <div class="row col-11 m-auto ">
+    <h1 class="mb-3">Launch Recipe you`ll like!</h1>
+    <% for(let i=0 ; i < 6 ; i++ ){ %>
+      <div class="col-6 col-lg-4 col-md-6 col-sm-6 mt-3">
+        <div class="card1 col-12">
+          <img src="/foo/<%= HomeData[i].image %>" class="card-img-top" />
+          <div class="card-content">
+            <h3 class="mb-4">
+              <%= HomeData[i].title%>
+            </h3>
+            <a href="/one-recipe/<%= HomeData[i].title%>" class="button">
+              Find out more
+              <span class="material-symbols-outlined">
+                arrow_right_alt
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <% } %>
+  </div>
+
+  <!-- Card////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <hr class="col-6" style="margin: auto; margin-top: 2cm; margin-bottom: 2cm;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Slides////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+  <div class="second-cards row m-auto col-11">
+    <h1 class="mb-3">Dinner Recipes</h1>
+    <% for(let i=0 ; i < 8 ; i++ ){ %>
+      <div class="card-div col-6 col-lg-3 col-md-4 mt-3">
+        <div class="article-card4 col-12">
+          <div class="content4">
+            <!-- <p class="date4">Jan 1, 2022</p> -->
+            <p class="title4">
+              <%= HomeData[i].title%>
+            </p>
+          </div>
+          <img src="/foo/<%= HomeData[i].image %>" class="" alt="article-cover" />
+        </div>
+      </div>
+      <% } %>
+  </div>
+
+
+
+  <!-- Slides////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+  <hr class="col-6" style="margin: auto; margin-top: 2cm; margin-bottom: 2cm;">
+
+
+  <%- include('footer'); -%>

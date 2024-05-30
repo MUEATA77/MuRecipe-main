@@ -1,0 +1,38 @@
+<%- include('header'); -%>
+  <div class="search-bar col-lg-7 col-md-11 col-sm-11 col-11 || m-0 m-auto mb-5">
+    <form action="/search" method="post" class="search-form">
+      <div class="input-wrapper col-12">
+        <input class="" name="recipe" type="text" placeholder="Search for recipe">
+        <button class="btn  " style="color: #F7F6F2;"><img src="/img/search.png" width="16px"
+            alt=""></button>
+      </div>
+    </form>
+  </div>
+
+
+
+  <div class="row col-11 m-auto ">
+    <% for(let i=0 ; i < SearchData.length ; i++ ){ %>
+      <div class="col-6 col-lg-3 col-md-6 col-sm-6 mt-3">
+        <div class="card1 col-12">
+          <img src="/foo/<%= SearchData[i].image %>" class="card-img-top" />
+          <div class="card-content">
+            <h3 class="mb-4">
+              <%= SearchData[i].title%>
+            </h3>
+            <a href="/one-recipe/<%= SearchData[i].title%>" class="button">
+              Find out more
+              <span class="material-symbols-outlined">
+                arrow_right_alt
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <% } %>
+  </div>
+
+  <div class="col-11 col-lg-6 col-md-7 col-sm-9" style="margin: auto; margin-top: 2cm;">
+    <hr>
+  </div>
+  <%- include('footer'); -%>

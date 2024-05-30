@@ -1,0 +1,400 @@
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* search bar */
+
+
+
+body,p {
+  font-family: 'Caprasimo', cursive;
+}
+
+
+.search-bar{
+  position: relative;
+}
+.search-bar button{
+  position:absolute;
+  right: 0%;
+  cursor: pointer;
+}
+.search-bar input[type="text"]{
+  width: 100%;
+  background-color:  #F7F6F2;
+  border:none ;
+  border-bottom: solid;
+}
+
+.search-bar input:focus{
+  width: 100%;
+  background-color:  #F7F6F2;
+  border:none ;
+  border-bottom: solid;
+  outline: none;
+}
+
+
+.second-cards .card-div{
+ cursor: pointer; 
+}
+
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* New*/
+
+
+
+
+.article-card {
+  /* width: 350px;
+  height: 220px; */
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 300ms;
+}
+
+.article-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.article-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.article-card .content {
+  box-sizing: border-box;
+  width: 100%;
+  position: absolute;
+  padding: 30px 20px 20px 20px;
+  height: auto;
+  bottom: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 500));
+}
+
+.article-card .date,
+.article-card .title {
+  margin: 0;
+}
+
+.article-card .date {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 4px;
+}
+
+.article-card .title {
+  font-size: 17px;
+  color: #fff;
+}
+
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* New*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* Cards*/
+:root {
+  --color-primary-white: rgb(240, 240, 240);
+}
+
+
+.card1 {
+  height: 10cm;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  color: var(--color-primary-white);
+  box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card1 img {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.9;
+  transition: opacity 0.2s ease-out;
+}
+
+.card1 h3 {
+  position: absolute;
+  inset: auto auto 30px 30px;
+  margin: 0;
+  transition: inset 0.3s 0.3s ease-out;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.card1 p,
+.card1 a {
+  position: absolute;
+  opacity: 0;
+  max-width: 80%;
+  transition: opacity 0.3s ease-out;
+}
+
+.card1 p {
+  inset: auto auto 80px 30px;
+}
+
+.card1 a {
+  inset: auto auto 40px 30px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.card1:hover h3 {
+  inset: auto auto 100px 30px;
+  transition: inset 0.3s ease-out;
+}
+
+.card1:hover p,
+.card1:hover a {
+  opacity: 1;
+  transition: opacity 0.5s 0.1s ease-in;
+}
+
+.card1:hover img {
+  transition: filter 0.3s ease-in;
+  filter: brightness(60%);
+}
+
+.material-symbols-outlined {
+  vertical-align: middle;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* Cards*/
+
+
+
+
+
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* dinner Cards*/
+a{
+  text-decoration: none;
+  color: black;
+}
+
+/* .footer-pages br{
+  margin-bottom: 1cm;
+} */
+
+
+
+.article-card4 {
+  /* width: 350px; */
+  height: 12cm;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 300ms;
+}
+
+.article-card4:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.article-card4 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.article-card4 .content4 {
+  box-sizing: border-box;
+  width: 100%;
+  position: absolute;
+  padding: 30px 20px 20px 20px;
+  height: auto;
+  bottom: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 500));
+}
+
+.article-card4 .date4,
+.article-card4 .title4 {
+  margin: 0;
+}
+
+.article-card4 .date4 {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 4px;
+}
+
+.article-card4 .title4 {
+  font-size: 17px;
+  color: #fff;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* Dinner Cards*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* one recipe card*/
+
+
+
+
+:root {
+  --color-primary-white: rgb(240, 240, 240);
+}
+
+
+.one-recipe-image {
+  height: 15cm;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  color: var(--color-primary-white);
+  box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+}
+
+.one-recipe-image img {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.9;
+  transition: opacity 0.2s ease-out;
+}
+
+.one-recipe-image h3 {
+  position: absolute;
+  inset: auto auto 30px 30px;
+  margin: 0;
+  transition: inset 0.3s 0.3s ease-out;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.one-recipe-image p,
+.one-recipe-image a {
+  position: absolute;
+  opacity: 0;
+  max-width: 80%;
+  transition: opacity 0.3s ease-out;
+}
+
+.one-recipe-imagep {
+  inset: auto auto 80px 30px;
+}
+
+.one-recipe-image a {
+  inset: auto auto 40px 30px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.one-recipe-image:hover h3 {
+  inset: auto auto 100px 30px;
+  transition: inset 0.3s ease-out;
+}
+
+.one-recipe-image:hover p,
+.one-recipe-image:hover a {
+  opacity: 1;
+  transition: opacity 0.5s 0.1s ease-in;
+}
+
+.one-recipe-image:hover img {
+  transition: filter 0.3s ease-in;
+  filter: brightness(60%);
+}
+
+.material-symbols-outlined {
+  vertical-align: middle;
+}
+
+
+
+
+
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* one recipe card*/
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 650px) {
+  .card1 {
+    height: 7cm;
+  }
+
+  .card1:hover h3 {
+    inset: auto auto 80px 30px;
+    transition: inset 0.3s ease-out;
+  }
+
+}
+
+
+
+@media only screen and (max-width: 1100px) {
+  .article-card4 {
+    height: 9cm;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .article-card4 {
+    height: 7cm;
+  }
+}
