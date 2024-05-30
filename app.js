@@ -57,6 +57,11 @@ app.get("/recipes", async function (req, res) {
 });
 
 
+app.get("/about", async function (req, res) {
+  res.render("about");
+});
+
+
 app.post("/search", async function (req, res) {
   const get_key = req.body.recipe
   const search_recipe = await myCollection.find({ $text: { $search: get_key } }).toArray()
